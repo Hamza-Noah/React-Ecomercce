@@ -7,6 +7,7 @@ export default function Product(props) {
 
   return (
     <>
+    
       <div className="card" style={{ width: "18rem" }}>
         <img src={product.image} className="card-img-top" alt={product.title} />
         <div className="card-body">

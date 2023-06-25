@@ -8,10 +8,9 @@ export default function ProductDetails() {
   const params = useParams();
 
   useEffect(() => {
-    fetch(`${api_url}/category/${params.id}`)
+    fetch(`${api_url}/${params.id}`)
       .then((res) => res.json())
-      .then((data) => setProducts(data))
-      .then((_) => console.log(321321312, product));
+      .then((data) => setProducts(data));
   }, []);
 
   useEffect(() => {

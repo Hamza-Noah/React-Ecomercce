@@ -20,7 +20,7 @@ export default function ProductsList() {
           {products.map((product, index) => {
             return (
               <div className="col-3" key={++index}>
-                <Product product={product} showButton={true}/>
+                <Product product={product}  showButton={true} />
               </div>
             );
           })}
