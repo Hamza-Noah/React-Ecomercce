@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Product from "../Product/Product";
+import ProductDetails from "../ProductDetails/ProductDetails";
 
 export default function ProductsList() {
   const api_url = "https://fakestoreapi.com/products";
@@ -19,7 +20,7 @@ export default function ProductsList() {
           {products.map((product, index) => {
             return (
               <div className="col-3" key={++index}>
-                <Product product={product} key={++index}/>;
+                <Product product={product} showButton={true}/>
               </div>
             );
           })}
