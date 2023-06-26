@@ -22,7 +22,6 @@ export default function ProductDetails() {
   }
   return (
     <>
-      <button onClick={printProduct}>Print Product in console</button>
       <Product product={product} showButton={false} />
     </>
   );
