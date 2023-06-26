@@ -18,6 +18,13 @@ export default function ProductsList() {
       .then((data) => setCategory(data));
   };
 
+  const getProductsInCategory = (category) => {
+    console.log(category);
+    fetch(`${api_url}/category/${category}`)
+      .then((res) => res.json())
+      .then((data) => setCategory(data));
+  };
+
   useEffect((_) => {
     getProducts();
     getCategories();
@@ -27,14 +34,20 @@ export default function ProductsList() {
     <>
       <div className="container">
         <h2 className="text-center p-3">Our Procuts</h2>
-        {categories.map((category) => {
+        {categories.map((catName) => {
+          console.log(catName);
           return (
-            <button className="btn btn-primary" key={category}>
-              {category}
+            <button
+              className="btn btn-info"
+              key={catName}
+              onClick={() => {
+                getProductsInCategory(catName);
+              }}
+            >
+              {catName}
             </button>
           );
         })}
-
         <div className="row">
           {products.map((product, index) => {
             return (
