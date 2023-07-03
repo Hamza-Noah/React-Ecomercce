@@ -1,52 +1,43 @@
 import React from "react";
+import "./Slider.css";
+import image1 from "../Images/image-1.jpg";
+import image2 from "../Images/image-2.jpg";
+import image3 from "../Images/image-3.jpg";
 
 export default function Slider() {
   return (
-    <div id="carouselExample" className="carousel slide">
-      <div className="carousel-inner">
-        <div className="carousel-item active">
-          <img
-            src="https://blog.hubspot.com/hubfs/ecommerce-10.jpg"
-            height="500px"
-            className="d-block w-100"
-            alt="..."
-          />
+    <>
+      <div id="carouselExample" className="carousel slide">
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img src={image1} className="d-block w-100 h-500" alt="..." />
+          </div>
+          <div className="carousel-item">
+            <img src={image2} className="d-block w-100 h-500" alt="..." />
+          </div>
+          <div className="carousel-item">
+            <img src={image3} className="d-block w-100 h-500" alt="..." />
+          </div>
         </div>
-        <div className="carousel-item">
-          <img
-            src="https://www.vocso.com/blog/wp-content/uploads/2022/02/eCommerce-Website-Features-1920-x-1080.jpg"
-            height="500px"
-            className="d-block w-100"
-            alt="..."
-          />
-        </div>
-        <div className="carousel-item">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9sS3pRo20G3nqpEe0h4wicMfEzR_Sy6XYxM0nInp94Lc3J3Sy6zVliLaLP87ZZWy6AbI&usqp=CAU"
-            height="500px"
-            className="d-block w-100"
-            alt="..."
-          />
-        </div>
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span className="carousel-control-prev-icon" aria-hidden="true" />
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span className="carousel-control-next-icon" aria-hidden="true" />
+          <span className="visually-hidden">Next</span>
+        </button>
       </div>
-      <button
-        className="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExample"
-        data-bs-slide="prev"
-      >
-        <span className="carousel-control-prev-icon" aria-hidden="true" />
-        <span className="visually-hidden">Previous</span>
-      </button>
-      <button
-        className="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExample"
-        data-bs-slide="next"
-      >
-        <span className="carousel-control-next-icon" aria-hidden="true" />
-        <span className="visually-hidden">Next</span>
-      </button>
-    </div>
+    </>
   );
 }
