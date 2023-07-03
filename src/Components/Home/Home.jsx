@@ -6,7 +6,9 @@ export default function Home() {
   return (
     <>
       <Slider />
-      <ProductList />
+      <div className="container">
+        <ProductList />
+      </div>
     </>
   );
 }
