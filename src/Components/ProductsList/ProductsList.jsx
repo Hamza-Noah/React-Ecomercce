@@ -12,15 +12,9 @@ export default function ProductsList() {
       .then((res) => res.json())
       .then((data) => setproducts(data));
   };
+
   const getCategories = () => {
     fetch(`${api_url}/categories`)
-      .then((res) => res.json())
-      .then((data) => setCategory(data));
-  };
-
-  const getProductsInCategory = (category) => {
-    console.log(category);
-    fetch(`${api_url}/category/${category}`)
       .then((res) => res.json())
       .then((data) => setCategory(data));
   };
@@ -32,6 +26,8 @@ export default function ProductsList() {
 
   return (
     <>
+      {console.log("heyll")}
+      <p>dsadsadsadsadsa </p>
       <div className="container">
         <h2 className="text-center p-3">Our Procuts</h2>
         {categories.map((catName) => {

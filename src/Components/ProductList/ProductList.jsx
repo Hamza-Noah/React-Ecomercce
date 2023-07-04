@@ -21,7 +21,7 @@ export default function ProductList() {
       <h1 className="text-center my-4">Our Produts</h1>
       {categories.map((category) => {
         return (
-          <button className="btn btn-info me-2 my-5" key={category}>
+          <button className="btn btn-info me-2 my-3" key={category}>
             {category}
           </button>
         );
