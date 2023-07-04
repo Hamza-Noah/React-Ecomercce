@@ -29,7 +29,7 @@ export default function ProductList() {
       <div className="row">
         {products.map((product, index) => {
           return (
-            <div className="col-lg-3" key={++index}>
+            <div key={++index} className="col-lg-3">
               <Product product={product} showButton={true} />
             </div>
           );
